@@ -1,35 +1,39 @@
 import React, { useState, useEffect } from "react";
 import { Heart, Sparkles } from "lucide-react";
+import video1 from "../../assets/video1.mp4";
+import video2 from "../../assets/video2.mp4";
+import video3 from "../../assets/video3.mp4";
+import video4 from "../../assets/video4.mp4";
 
 /**
  * QuestionSection Component
- * 
+ *
  * The "Will You Be My Valentine?" proposal section with Yes/No buttons.
  * Features:
  * - Animated background videos
  * - "No" button that moves away when clicked
  * - Growing "Yes" button
  * - Encouraging messages
- * 
+ *
  * Props:
  * @param {number} noClickCount - Number of times "No" has been clicked
  * @param {object} noButtonPos - Position {x, y} of the "No" button
  * @param {function} onYesClick - Handler for "Yes" button click
  * @param {function} onNoClick - Handler for "No" button click
  */
-const QuestionSection = ({ noClickCount, noButtonPos, onYesClick, onNoClick }) => {
+const QuestionSection = ({
+  noClickCount,
+  noButtonPos,
+  onYesClick,
+  onNoClick,
+}) => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [videoPositions, setVideoPositions] = useState([]);
   const [shuffledVideos, setShuffledVideos] = useState([]);
 
   // Stock videos from Pexels (royalty-free)
   // TODO: Replace with your own video files or other stock videos
-  const videoPlaceholders = [
-    "https://player.vimeo.com/external/371433846.sd.mp4?s=236fd2a706c3c29e04a4&profile_id=164&oauth2_token_id=57447761", // Hearts
-    "https://player.vimeo.com/external/371433846.sd.mp4?s=236fd2a706c3c29e04a4&profile_id=164&oauth2_token_id=57447761", // Love
-    "https://player.vimeo.com/external/371433846.sd.mp4?s=236fd2a706c3c29e04a4&profile_id=164&oauth2_token_id=57447761", // Couple
-    "https://player.vimeo.com/external/371433846.sd.mp4?s=236fd2a706c3c29e04a4&profile_id=164&oauth2_token_id=57447761", // Romance
-  ];
+  const videoPlaceholders = [video1, video2, video3, video4];
 
   // Messages shown when "No" is clicked
   const noMessages = [
@@ -55,8 +59,13 @@ const QuestionSection = ({ noClickCount, noButtonPos, onYesClick, onNoClick }) =
     ];
 
     // Shuffle positions
-    const shuffledPositions = [...safePositions].sort(() => Math.random() - 0.5);
-    const selectedPositions = shuffledPositions.slice(0, videoPlaceholders.length);
+    const shuffledPositions = [...safePositions].sort(
+      () => Math.random() - 0.5,
+    );
+    const selectedPositions = shuffledPositions.slice(
+      0,
+      videoPlaceholders.length,
+    );
     setVideoPositions(selectedPositions);
 
     // Shuffle videos
@@ -82,7 +91,9 @@ const QuestionSection = ({ noClickCount, noButtonPos, onYesClick, onNoClick }) =
           <div
             key={idx}
             className={`absolute rounded-lg overflow-hidden shadow-xl transition-all duration-700 ${
-              idx === currentVideoIndex ? "opacity-100 scale-100" : "opacity-0 scale-90"
+              idx === currentVideoIndex
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-90"
             }`}
             style={{
               width: "200px",
