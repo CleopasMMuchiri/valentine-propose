@@ -25,16 +25,20 @@ const QuestionSection = ({ noClickCount, noButtonPos, onYesClick, onNoClick }) =
   // Stock videos from Pexels (royalty-free)
   // TODO: Replace with your own video files or other stock videos
 
-  const videoPlaceholders = [
-  // Reliable test video 1 (Nature/Generic)
-  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-  // Reliable test video 2 (Cinema/Action)
-  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-  // Reliable test video 3 (Joyrides)
-  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-  // Reliable test video 4 (Scenery)
-  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+const videoPlaceholders = [
+  // 1. Couple walking on beach (Sunset/Romance)
+  "https://assets.mixkit.co/videos/preview/mixkit-couple-walking-on-the-beach-6-large.mp4",
+  
+  // 2. Couple holding hands (Intimacy/Love)
+  "https://assets.mixkit.co/videos/preview/mixkit-man-holding-the-hand-of-a-woman-12000-large.mp4",
+  
+  // 3. Happy couple laughing (Joy/Connection)
+  "https://assets.mixkit.co/videos/preview/mixkit-young-couple-laughing-on-bed-4248-large.mp4",
+  
+  // 4. Couple looking at view (Future/Together)
+  "https://assets.mixkit.co/videos/preview/mixkit-couple-looking-at-the-sunset-4092-large.mp4"
 ];
+  
   // Messages shown when "No" is clicked
   const noMessages = [
     "Are you sure? 🥺",
