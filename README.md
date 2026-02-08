@@ -1,9 +1,3 @@
-This is already solid — it just needs **tightening, clearer hierarchy, less repetition, and a more “public-repo ready” ending** (credits + support). I’ll keep your content, **refine the language**, and **add a clean Support / Donations section** with **crypto + AirTM**, *no phone number* (good instinct).
-
-Below is a **refined, copy-paste-ready README.md**.
-
----
-
 # 💕 Valentine’s Day Interactive Website
 
 A beautiful, interactive Valentine’s Day website featuring photos, questions, playful interactions, and a heartfelt final message.
