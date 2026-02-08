@@ -24,13 +24,17 @@ const QuestionSection = ({ noClickCount, noButtonPos, onYesClick, onNoClick }) =
 
   // Stock videos from Pexels (royalty-free)
   // TODO: Replace with your own video files or other stock videos
-  const videoPlaceholders = [
-    "https://player.vimeo.com/external/371433846.sd.mp4?s=236fd2a706c3c29e04a4&profile_id=164&oauth2_token_id=57447761", // Hearts
-    "https://player.vimeo.com/external/371433846.sd.mp4?s=236fd2a706c3c29e04a4&profile_id=164&oauth2_token_id=57447761", // Love
-    "https://player.vimeo.com/external/371433846.sd.mp4?s=236fd2a706c3c29e04a4&profile_id=164&oauth2_token_id=57447761", // Couple
-    "https://player.vimeo.com/external/371433846.sd.mp4?s=236fd2a706c3c29e04a4&profile_id=164&oauth2_token_id=57447761", // Romance
-  ];
 
+  const videoPlaceholders = [
+  // Reliable test video 1 (Nature/Generic)
+  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+  // Reliable test video 2 (Cinema/Action)
+  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+  // Reliable test video 3 (Joyrides)
+  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+  // Reliable test video 4 (Scenery)
+  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+];
   // Messages shown when "No" is clicked
   const noMessages = [
     "Are you sure? 🥺",
